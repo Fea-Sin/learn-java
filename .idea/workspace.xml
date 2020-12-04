@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48e49041-e9fe-4678-83fd-7d1e04b47386" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsTestFinder.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch2/ch2.md" beforeDir="false" afterPath="$PROJECT_DIR$/ch2/ch2.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +41,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="52">
-                <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <first_editor relative-caret-position="78">
+                <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
               </first_editor>
               <second_editor />
             </state>
@@ -57,8 +53,8 @@
         <entry file="file://$PROJECT_DIR$/ch2/ch2.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="396">
-                <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+              <first_editor relative-caret-position="728">
+                <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
               </first_editor>
               <second_editor />
             </state>
@@ -97,16 +93,16 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/ch1/ch1.md" />
         <option value="$PROJECT_DIR$/ch1/lesson2.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/ch2/Welcome" />
         <option value="$PROJECT_DIR$/ch2/Welcome/Welcome.java" />
         <option value="$PROJECT_DIR$/ch2/ch2.md" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="606" />
-    <option name="y" value="437" />
+    <option name="x" value="399" />
+    <option name="y" value="108" />
     <option name="width" value="1246" />
     <option name="height" value="969" />
   </component>
@@ -130,12 +126,6 @@
               <item name="learn-java" type="b2602c69:ProjectViewProjectNode" />
               <item name="learn-java" type="462c0819:PsiDirectoryNode" />
               <item name="ch2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="learn-java" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learn-java" type="462c0819:PsiDirectoryNode" />
-              <item name="ch2" type="462c0819:PsiDirectoryNode" />
-              <item name="Welcome" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -177,7 +167,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="606" y="437" width="1246" height="969" extended-state="0" />
+    <frame x="399" y="108" width="1246" height="969" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1769103" />
@@ -276,16 +266,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="52">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ch2/Welcome">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -300,11 +280,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="78">
+            <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ch2/ch2.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="396">
-            <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+          <first_editor relative-caret-position="728">
+            <caret line="28" column="18" lean-forward="true" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="18" />
           </first_editor>
           <second_editor />
         </state>
