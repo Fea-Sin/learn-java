@@ -39,6 +39,8 @@ java Welcome
 javac程序是一个Java编译器，它将文件Welcome.java编译成Welcome.class。
 java程序启动java虚拟机，虚拟机执行编译器放在class文件中的字节码。
 
+本章中，我们学习了有关编译和运行Java程序的机制。
+
 
 
 

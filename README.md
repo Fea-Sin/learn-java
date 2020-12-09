@@ -5,4 +5,6 @@
 
 [Java发展简史](ch1/lesson2.md)
 
-[java程序设计环境](ch2/ch2.md)
+[第二章 Java程序设计环境](ch2/ch2.md)
+
+[第三章 Java的基本程序设计结构](ch3/ch3.md)
