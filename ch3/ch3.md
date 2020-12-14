@@ -140,6 +140,83 @@ int i, j;
 
 ### 变量初始化
 
+声明一个变量之后，必须用赋值语句对变量进行显示初始化，千万不要使用未初始化的变量，也可以
+将变量的声明和初始化放在同一行中
+```
+int vacationDays = 12
+```
+在Java中可以将变量声明放在代码中的任何地方，变量的声明尽可能的靠近第一次使用的地方，这是一种
+良好的程序编写风格。
+```
+double salary = 65000.0
+System.out.println(salary)
+int vacationDays = 12
+```
+
+### 常量
+
+在Java中，利用关键字final指示常量，关键字final表示这个变量只能赋值一次，一旦被赋值之后，就不能再
+改了。习惯上常量使用大写
+```
+final double CM_PER_INCH = 2.54
+```
+在Java中，经常希望某个常量可以在一个类中的多个方法中使用，通常将这些常量称为类常量，可以使用关键字
+static final设置一个类常量。
+```
+public class Constants
+{
+    public static final double CM_PER_INCH = 2.54;
+    
+    public static void main(String[] args)
+    {
+        double pageWidth = 8.5;
+        double pageHeight = 11;
+        System.out.println("Paper size in centimeters:
+            + pageWidth * CM_PER_INCH + "by " + pageHeight * CM_PER_INCH");
+    }
+}
+```
+需要注意，类常量的定义位于main方法的外部，在同一个类的其他方法中也可以使用这个常量，而且，
+如果一个常量被声明为public，那么其他类的方法也可以使用这个常量，Constants.CM_PER_INCH就是
+这样一个常量。
+
+> const 是Java保留的关键字，但目前并没有使用，在Java中，必须使用final定义常量
+
+### 运算符
+
+在Java中，使用算术运算符`+、-、*、/`表示加、减、乘、除运算。当参与 / 运算的两个操作数都是
+整数时，表示整数除法，否则表示浮点除法，整数的求余操作（有时称为取模）用 % 表示
+```
+15 / 2 // 7
+15 % 2 // 1
+15.0 / 2 // 7.5
+```
+需要注意，整数被0除将会产生一个异常，而浮点数被0除将会得到无穷大或NaN结果。
+
+### 数学函数与常量
+
+在Math类中，包含了各种各样的数学函数，想要计算一个数值的平方根，使用sqrt方法。在Java中，
+没有幂运算，因此需要借助Math类的pow方法，pow方法有两个double类型的参数。
+```
+double x = 4;
+double y = Math.sqrt(x); // 2.0
+
+double z = Math.pow(2, 10)
+
+Math.sin
+Math.cos
+Math.exp
+Math.log
+Math.log10
+
+// Java提供了用于表示排和e的近似值
+Math.PI
+Math.E
+```
+
+### 数值类型之间的转换
+
+
 
 
 
