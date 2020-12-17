@@ -292,6 +292,64 @@ enum Size { SMALL, MEDIUM, LARGE, EXTRA_LARGE }
 
 ## 字符串
 
+从概念上讲，Java字符就是Unicode字符序列，Java没有内置的字符串类型，而是在标准Java类库中提供了
+一个预定义类（String），每个用双引号括起来的字符串都是String类的一个实例。
+```
+String e = "";
+String greeting = "Hello";
+```
+
+String类的sunstring方法可以从一个较大的字符串提取出一个子串。
+```
+String greeting = "Hello";
+String s = greeting.substring(0, 3); // s值为 Hel，其长度为3-0=3
+```
+substring方法参数是左闭右开获取子串，substring(a, b)的长度为b-a
+
+与绝大多数的程序设计语言一样，Java语言允许使用 + 号连接两个字符串。当将一个字符串与一个非字符串的值
+进行拼接时，后者被转换成为字符串，任何一个Java对象都可以转换成字符串。
+
+这种特性通常用在输出语句中
+```
+System.out.println("The answer is " + answer)
+```
+
+#### 不可变字符串
+
+String类没有提供用于修改字符串的方法，如果希望将greeting的内容修改为"Help!"，不能直接地将greeting
+的最后两个位置的字符修改为"p!"，这对于C程序员来说，将会感到无从下手。在Java中实现这项操作非常容易，
+首先提取需要的字符，再拼接上替换的字符串
+```
+greeting = greeting.substring(0, 3) + "p!"
+```
+
+由于不能修改Java字符串中的字符，所以Java中String类对象称为不可变字符串，字符串"Hello"永远包含字符
+H、e、l、l和o的代码单元序列，而不能修改其中的任何一个字符。当然，可以修改字符串变量greeting，让它
+引用另外一个字符串。这样做是否会降低运行效率呢？不可变字符串的优点是：编译器可以让字符串共享。
+
+Java的设计者认为共享带来的高效率远远胜于提取、拼接字符串所带来的低效率。
+
+在C程序员第一次接触Java字符串的时候，常常会感到迷惑，因为它们总是将字符串认为是字符型数组
+`char greeting[] = "Hello"`
+
+在Java中将greeting赋予另外一个值，会不会产生内存遗漏呢，毕竟，原始字符串放置在堆中，十分幸运，Java
+将自动地进行垃圾回收，如果一块内存不再使用了，系统最终会将其收回。
+
+C++字符串是可以修改的，也就是说，可以修改字符串中的单个字符。
+
+#### 检测字符串是否相等
+
+可以使用equals方法检测两个字符串是否相等`s.equals(t)`，字符串s与t相等返回true，否则返回false，
+s和t可以是字符串变量，也可以是字符串字面量。
+```
+"Hello".equals(greeting) // true
+```
+
+不要使用==运算符检测两个字符串是否相等，这个运算只能够确定两个字符串是否放置在同一个位置上。
+
+#### 空串与Null串
+
+
 
 
 
