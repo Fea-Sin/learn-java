@@ -8,3 +8,5 @@
 [第二章 Java程序设计环境](ch2/ch2.md)
 
 [第三章 Java的基本程序设计结构](ch3/ch3.md)
+
+[Java基本程序设计结构二](ch3/lesson1.md)
