@@ -63,3 +63,40 @@ searching backward starting at the specified index.
 
 [阅读联机API](https://docs.oracle.com/javase/8/docs/api/)
 
+
+## 输入输出
+
+打印输出到"标准输出流"（即控制台窗口）是一件非常容易的事情，只要调用System.out.println即可。然而，
+读取"标准输入流"System.in就没那么简单了。要想通过控制台进行输入，首先需要构建一个Scanner对象，并
+与"标准输入流"System.in关联。
+```
+Scanner in = new Scanner(System.in);
+```
+现在可以使用Scanner类的各种方法实现输入操作了。
+[实例](InputTest/InputTest.java)
+
+### 格式化输出
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
