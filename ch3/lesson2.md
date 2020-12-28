@@ -150,6 +150,82 @@ switch (choice)
 }
 ```
 
+### 中断控制流程语句
+
+尽管Java的设计者将goto作为保留字，但实际上并没有打算在语言中使用它，通常使用goto语句被认为是一种
+拙劣的程序设计风格。无限制地使用goto语句确实是导致错误的根源，但在有些情况下，偶尔使用goto跳出循环
+还是有益处的，Java设计者同意这种看法，在Java语言中增加了一条带标签的break，以此来支持这种程序
+设计风格。
+
+下面看一下不带标签的break语句
+```
+while (years <= 100)
+{
+    balance += payment;
+    double interest = balance * interestRate / 100;
+    balance += interest;
+    if (balance >= goal) break;
+    years++
+}
+```
+Java还提供了一种带标签的break语句，用于跳出多重嵌套的循环语句，请注意，标签必须放在希望跳出的最外层
+循环之前，且必须紧跟一个冒号。
+```
+Scanner in = new Scanner(System.in);
+int n;
+read_data:
+while (...)
+{
+    for (...)
+    {
+        System.out.print("Enter a number >= 0;");
+        n = in.nextInt();
+        if (n < 0)
+        {
+            ...
+            break read_data;
+        }
+    }
+    
+}
+if (n < 0)
+{
+    // deal with bad sitution
+}
+else
+{
+    // carry out normal processing
+}
+```
+如果输入有误，通过执行带标签的break跳转到带标签的语句块末尾。对于任何使用break语句的代码都
+需要检测循环是正常结束的，还是由break跳出。
+
+还有一个continue语句，与break语句一样，它将中断正常的控制流程，continue语句将控制转移到
+最内层循环的首部。
+```
+Scanner in = new Scanner(System.in)
+while (sum < goal)
+{
+    System.out.print("Enter a number");
+    n = in.nextInt();
+    if (n < 0) continue;
+    sum += n; // not executed if n < 0
+}
+```
+如果n<0，则continue语句越过了当前循环体的剩余部分，立即跳到循环首部。
+
+如果将continue语句用于for循环中，就可以跳到for循环的"更新"部分。
+```
+for (count = 1; count <= 100; count++)
+{
+    System.out.print("Enter a number")
+    n = in.nextInt();
+    if (n < 0) continue;
+    sum += n;
+}
+```
+如果n<0，则continue语句跳到count++语句。
+
 
 
 
