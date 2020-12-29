@@ -11,4 +11,4 @@
 
 [Java基本程序设计结构二](ch3/lesson1.md)
 
-[控制流程](ch3/lesson2.md)
+[Java基本程序设计结构三](ch3/lesson2.md)
