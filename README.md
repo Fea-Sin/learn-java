@@ -16,3 +16,5 @@
 [Java基本程序设计四](ch3/lesson3.md)
 
 [第四章 对象与类](ch4/ch4.md)
+
+[使用预定义类](ch4/lesson1.md)
