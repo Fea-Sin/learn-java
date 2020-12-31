@@ -18,3 +18,5 @@
 [第四章 对象与类](ch4/ch4.md)
 
 [使用预定义类](ch4/lesson1.md)
+
+[用户自定义类](ch4/lesson2.md)
