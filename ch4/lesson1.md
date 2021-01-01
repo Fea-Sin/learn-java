@@ -94,7 +94,7 @@ LocalDate类封装了实例域来维护所设置的日期。
 这个调用之后newYearsEve会有什么变化？它会改为1000天之后的日期吗？事实上，并没有。plusDays方法
 会生成一个新的LocalDate对象，然后把这个新对象赋给aThousandDaysLater变量。原来的对象不做任何改动。
 
-[实例]()
+[实例](CalendarTest/CalendarTest.java)
 
 可以看到，利用LocalDate类可以编写一个日期程序，能处理星期几以及各月天数不同等复杂问题。你并不需要知道
 LocalDate类如何计算月和星期几，只需要使用这个类的接口，如plusDays和getDayOfWeek等方法。
