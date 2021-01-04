@@ -22,3 +22,7 @@
 [用户自定义类](ch4/lesson2.md)
 
 [静态域与静态方法](ch4/lesson3.md)
+
+[对象构造](ch4/lesson4.md)
+
+[包](ch4/lesson5.md)
