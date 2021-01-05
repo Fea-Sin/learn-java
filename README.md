@@ -26,3 +26,5 @@
 [对象构造](ch4/lesson4.md)
 
 [包](ch4/lesson5.md)
+
+[文档注释](ch4/lesson6.md)
