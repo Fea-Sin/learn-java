@@ -28,3 +28,7 @@
 [包](ch4/lesson5.md)
 
 [文档注释](ch4/lesson6.md)
+
+[类设计技巧](ch4/lesson7.md)
+
+[第五章 继承](ch5/ch.md)
