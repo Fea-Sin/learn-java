@@ -129,14 +129,238 @@ Manager::Manager(String name, double salary, int year, int month, int day)
 
 #### 多态
 
+有一个用来判断是否应该设计为继承关系的简单规则，这就是"is-a"规则，它表明子类的每个对象也是
+超类的对象。"is-a"规则的另一种表述法是置换法则，它表明程序中出现超类对象的任何地方都可以用
+子类对象置换。
+例如，可以将一个子类的对象赋给超类的变量
+```
+Employee e;
+e = new Employee(...)  // Employee object expected
+e = new Manager(...)   // OK，Manager can be used as well
+```
+
+在Java程序设计语言中，对象变量是多态的。
+
+```
+Manager boss = new Manager(...);
+Employee[] staff = new Employee[3];
+staff[0] = boss;
+```
+在这个例子中，变量`staff[0]`与boss引用同一个对象，但编译器将`staff[0]`看成Employee对象。
+```
+boss.setBonus(5000); // ok
+
+// 但不能这样调用
+staff[0].setBonus(5000) // Error
+```
+
+不能将一个超类的引用赋给子类变量。例如，下面的赋值是非法的
+```
+Manager m = staff[i]; // Error
+```
+
+#### 理解方法调用
+
+弄清楚如何在对象上应用方法调用非常重要。下面假设要调用x.f(args)，隐式参数x声明为类C的一个对象。
+下面是调用过程的详细描述
+
+1）编译器查看对象的声明类型和方法名。假设调用x.f(param)，且隐式参数x声明为C类的对象，需要注意的是，
+有可能存在多个名字为f，但参数类型不一样的方法，例如可能存在方法f(int)和方法f(String)。编译器将会
+一一列举所有C类中名为f的方法和超类中访问属性为public且名为f的方法（超类的私有方法不可访问）。
+至此，编译器已经获得所有可能被调用的候选方法。
+
+2）加下来，编译器将查看调用方法时提供的参数类型。如果在所有名为f的方法中存在一个与提供的参数类型完全
+匹配，就选择这个方法。这个过程被称为重载解析（overloading resolution）。例如，对于调用
+x.f("Hello")来说，编译器将会挑选f(String)。
+
+由于允许类型转换（int可以转换成double，Manager可以转换成Employee），所以这个过程可能很复杂。
+如果编译器没有找到与参数类型匹配的方法，或者发现经过类型转换后有多个方法与之匹配，就会报告一个错误。
+至此，编译器已经获得需要调用的方法名字和参数类型。
+
+**注释：**前面曾经说过，方法的名字和参数列表称为方法的签名。例如，f(int)和f(String)是两个具有相同
+名字，不同签名的方法。如果在子类中定义了一个与超类签名相同的方法，那么类中的这个方法就覆盖了超类中的
+这个相同签名的方法。
+不过，返回类型不是签名的一部分，因此，在覆盖方法时，一定要保证返回类型的兼容性。
+
+3）如果是private方法、static方法、final方法或者构造器，那么编译器将可以准确地知道应该调用
+哪个方法，我们将这种调用方式称为静态绑定（static binding）。与此对应的是，调用的方法依赖于
+隐式参数的实际类型，并且在运行是实现动态绑定。
+至此，编译器采用动态绑定的方法生成一条调用f(String)的指令。
+
+4）当程序运行时，并且采用动态绑定调用方法时，虚拟机一定调用与x所引用对象的实际类型最合适的那个类的方法。
+每次调用方法都要进行搜索，时间开销相当大。因此，虚拟机预先为每个类创建了一个方法表（method table）,
+其中列出了所有方法的签名和实际调用的方法。
+
+动态绑定有一个非常重要的特性，无需对现存的代码进行修改，就可以对程序扩展。假设增加一个新类Executive，
+并且变量e有可能引用这个类的对象，我们不需要对包含调用e.getSalary的代码进行重新编译。如果e恰好引用
+一个Executive类的对象，就会自动地调用Executive.getSalary()方法。
+
+**警告：**在覆盖一个方法的时候，子类方法不能低于超类方法的可见性。
+
+#### 阻止继承：final类和方法
+
+有时候，可能希望阻止人们利用某个类定义子类，不允许扩展的类被称为final类。如果在定义类的时候使用了
+final修饰符就表明这个类是final类。例如，假设希望阻止人们定义Executive类的子类，就可以在定义
+这个类的时候，使用final修饰符声明
+```
+public final class Executive extends Manager
+{
+    ...
+}
+```
+类中的方法也可以被声明为final。如果这样做，子类就不能覆盖这个方法（final类中的所有方法自动
+地成为final方法）。
+```
+public class Employee
+{
+    ...
+    public final String getName()
+    {
+        return name;
+    }
+}
+```
+前面曾将说过，域也可以被声明为final。对于final域来说，构造对象之后不允许改变它们的值了。
+不过，如果将一个类声明为final，只有其中的方法自动地成为final而不包括域。
+
+有些程序员认为，除非有足够的理由使用多态性，应该将所有的方法都声明为final。事实上，在C++和C#
+中，如果没有特别地说明，所有的方法都不具有多态性。这两种做法可能都有些偏激。我们提倡在设计
+类层次时，仔细地思考应该将哪些方法和类声明为final。
+
+如果一个方法没有被覆盖且很短，编译器就能够对它进行优化处理，这个过程称为内联（inlining）。例如，
+内联调用e.getName()将被替换为访问e.name域。
+
+#### 强制类型转换
+
+在第3章曾经讲过，将一个类型强制转换称另外一个类型的过程被称为类型转换。Java程序设计提供了一种
+专门进行类型转换的表示法。例如
+```
+double x = 3.405;
+int nx = (int)x;
+```
+将表达式x的值转换成整数类型，舍弃了小数部分。
+
+正像有时候将浮点型数值转换成整型数值一样，有时候也可能需要将某个类的对象引用转换成另外一个类
+的对象引用。例如
+```
+Manager boss = (Manager)staff[0];
+```
+
+如果试图在继承链上进行向下的类型转换，并且"谎报"有关对象包含的内容，会发生什么情况？
+```
+Manager boss = (Manager) staff[1]; // Error
+```
+运行这个程序时，Java运行时系统将报告这个错误，并产生一个ClassCastException异常。如果没有
+捕获这个异常，那么程序就会终止。因此，应该养成一个良好的程序设计习惯，在进行类型转换之前，
+先查看一下是否成功转换。这个过程简单地使用instanceof操作符就可以实现。
+```
+if (staff[1] instanceof Manager)
+{
+    boss = (Manager)staff[1];
+}
+```
+最后，如果这个类型转换不成功，编译器就不会进行转换。
+
+- 只能在继承层次内进行类型转换
+- 在将超类转换成子类之前，应该使用instanceof 进行检查
+
+实际上，通过类型转换调整对象的类型并不是一种好的做法。大多数情况下并不需要将Employee对象转换成Manager
+对象，两个类的对象都能够正确调用getSalary方法，这是因为实现多态性的动态绑定机制能够自动地找到
+相应的方法。
+只有在使用Manager中特有的方法时才需要进行类型转换。
+
+> Java使用的类型转换语法来源于C语言"以往糟糕的日子"
+
+#### 抽象类
+
+如果自下而上在类的继承层次结构中上移，位于上层的类更具有通用性，甚至可能更加抽象。从某种角度看，
+祖先类更加通用，人们只将它作为派生其他类的基类，而不作为想使用的特定的实用类。
+
+包含一个或多个抽象方法的类必须是抽象类。
+除了抽象方法外，抽象类还可以包括具体数据和具体方法。例如
+```
+public abstract class Person
+{
+    private String name;
+    
+    public Person(String name)
+    {
+        this.name = name;
+    }
+    public abstract String getDescription();
+    
+    public String getName()
+    {
+        return name;
+    }
+}
+```
+抽象方法充当着占位的角色，它们的具体实现在子类中。类即使不含有抽象方法，也可以将类声明为抽象类。
+抽象类不能被实例化。也就是说，将一个类声明为abstract，就不能创建这个类的对象。但可以创建一个
+具体子类的对象。
+
+需要注意，可以定义一个抽象类的对象变量，但是它只能引用非抽象子类的对象。
+```
+Person p = new Student("Vince Vu", "Econmics");
+```
+
+**注释：**在C++中，有一种在尾部用 =0 标记的抽象方法，称为纯虚函数，例如
+```
+// C++
+class Person
+{
+    virtual string getDescription() =0;
+    
+    ...
+}
+```
+只要有一个纯虚函数，这个类就是抽象类，在C++中，没有提供用于表示抽象类的特殊关键字。
+
+下面定义一个扩展抽象类Person的具体子类Student
+```
+public class Student extends Person
+{
+    private String major;
+    
+    public Student(String name, String major)
+    {
+        super(name);
+        this.major = major;
+    }
+    public String getDescription()
+    {
+        return "a student majoring in " + major;
+    }
+}
+```
+
+有些人可能对下面这个调用感到困惑
+```
+Person[] people = new Person[1]
+people[0] = new Student(...)
+for (Person p : people)
+    System.out.println(p.getName() + "," + p.getDescription());
+```
+p这不是调用了一个没有定义的方法吗，由于不能构造抽象类Person的对象，所以变量p永远不会引用Person对像，
+而是引用诸如Student这样的具体子类对象，而这些对象都定义了getDescription方法。
+
+是否可以省略Person超类中的抽象方法，而仅在Student子类中定义getDescription方法呢？如果这样的话，
+就不能通过变量p调用getDescription方法了。编译器只允许调用在类中声明的方法。
+
+在Java程序设计语言中，抽象方法是一个重要的概念。在接口（interface）中将会看到更多的抽象方法。
 
 
+#### 受保护访问
 
+归纳一下Java用于控制可见性的4个访问修饰符
 
+1）仅本类可见 private
 
+2）对所有类可见 public
 
+3）对本包和所有子类可见 protected
 
-
+4）对本包可见 默认，不需要修饰符
 
 
 

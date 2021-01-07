@@ -32,3 +32,5 @@
 [类设计技巧](ch4/lesson7.md)
 
 [第五章 继承](ch5/ch.md)
+
+[Object: 所有类的超类](ch5/lesson1.md)
