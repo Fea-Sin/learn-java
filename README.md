@@ -34,3 +34,5 @@
 [第五章 继承](ch5/ch.md)
 
 [Object: 所有类的超类](ch5/lesson1.md)
+
+[泛型数组列表](ch5/lesson2.md)
