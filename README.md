@@ -38,3 +38,5 @@
 [泛型数组列表](ch5/lesson2.md)
 
 [反射](ch5/lesson3.md)
+
+[继承的设计技巧](ch5/lesson4.md)
