@@ -40,3 +40,5 @@
 [反射](ch5/lesson3.md)
 
 [继承的设计技巧](ch5/lesson4.md)
+
+[第6章 接口、lambda表达式与内部类](ch6/ch.md)
