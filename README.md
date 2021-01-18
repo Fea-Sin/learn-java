@@ -44,3 +44,5 @@
 [第6章 接口、lambda表达式与内部类](ch6/ch.md)
 
 [接口示例](ch6/lesson1.md)
+
+[lambda 表达式](ch6/lesson2.md)
