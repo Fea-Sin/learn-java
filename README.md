@@ -46,3 +46,5 @@
 [接口示例](ch6/lesson1.md)
 
 [lambda 表达式](ch6/lesson2.md)
+
+[内部类](ch6/lesson3.md)

@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48e49041-e9fe-4678-83fd-7d1e04b47386" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch6/lesson1.md" beforeDir="false" afterPath="$PROJECT_DIR$/ch6/lesson1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch6/lesson2.md" beforeDir="false" afterPath="$PROJECT_DIR$/ch6/lesson2.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +31,8 @@
         <entry file="file://$PROJECT_DIR$/ch6/lesson2.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="78">
-                <caret line="3" selection-start-line="3" selection-end-line="3" />
+              <first_editor relative-caret-position="236">
+                <caret line="326" column="57" lean-forward="true" selection-start-line="326" selection-start-column="57" selection-end-line="326" selection-end-column="57" />
               </first_editor>
               <second_editor />
             </state>
@@ -44,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/ch6/lesson1.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="106">
+              <first_editor relative-caret-position="1913">
                 <caret line="158" column="1" lean-forward="true" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
               </first_editor>
               <second_editor />
@@ -107,8 +106,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="529" />
-    <option name="y" value="75" />
+    <option name="x" value="423" />
+    <option name="y" value="38" />
     <option name="width" value="1138" />
     <option name="height" value="953" />
   </component>
@@ -183,7 +182,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="529" y="75" width="1138" height="953" extended-state="0" />
+    <frame x="641" y="244" width="1138" height="953" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24087591" />
@@ -510,16 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch6/lesson1.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="106">
-            <caret line="158" column="1" lean-forward="true" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -530,11 +519,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ch6/lesson1.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="1913">
+            <caret line="158" column="1" lean-forward="true" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ch6/lesson2.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="78">
-            <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <first_editor relative-caret-position="236">
+            <caret line="326" column="57" lean-forward="true" selection-start-line="326" selection-start-column="57" selection-end-line="326" selection-end-column="57" />
           </first_editor>
           <second_editor />
         </state>
