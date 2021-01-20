@@ -48,3 +48,5 @@
 [lambda 表达式](ch6/lesson2.md)
 
 [内部类](ch6/lesson3.md)
+
+[代理](ch6/lesson4.md)
