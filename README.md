@@ -50,3 +50,5 @@
 [内部类](ch6/lesson3.md)
 
 [代理](ch6/lesson4.md)
+
+[第7章 泛型程序设计](ch7/ch.md)
