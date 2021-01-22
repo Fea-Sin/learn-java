@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48e49041-e9fe-4678-83fd-7d1e04b47386" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch6/lesson4.md" beforeDir="false" afterPath="$PROJECT_DIR$/ch6/lesson4.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch7/ch.md" beforeDir="false" afterPath="$PROJECT_DIR$/ch7/ch.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,9 +30,9 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ch7/ch.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="104">
-                <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="145">
+                <caret line="217" column="34" selection-start-line="217" selection-start-column="34" selection-end-line="217" selection-end-column="34" />
               </first_editor>
               <second_editor />
             </state>
@@ -146,8 +145,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="401" />
-    <option name="y" value="323" />
+    <option name="x" value="498" />
+    <option name="y" value="23" />
     <option name="width" value="1138" />
     <option name="height" value="853" />
   </component>
@@ -222,7 +221,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="401" y="323" width="1138" height="853" extended-state="0" />
+    <frame x="483" y="256" width="1138" height="853" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24087591" />
@@ -243,7 +242,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295325" />
       <window_info anchor="bottom" id="GraphQL" order="7" weight="0.3295325" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.478318" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3298292" />
       <window_info anchor="bottom" id="Flutter Performance" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Console" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.3295325" />
@@ -292,6 +291,10 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout-to-restore>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ch1/ch1.md">
@@ -601,9 +604,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ch7/ch.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="104">
-            <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="145">
+            <caret line="217" column="34" selection-start-line="217" selection-start-column="34" selection-end-line="217" selection-end-column="34" />
           </first_editor>
           <second_editor />
         </state>
