@@ -160,6 +160,39 @@ publice static <T extends Throwable> void doWork(Class<T> t)
 
 ## 泛型类型的继承规则
 
+在使用泛型类时，需要了解一些有关继承和子类型的准则。
+考虑一个类和一个子类，如Employee和Manager，Pair<Manager>是Pair<Employee>的一个子类吗？
+答案是"不是"。或许人们会感到奇怪，例如，下面的代码将不能编译成功
+```
+Manager[] topHonchos = ...;
+Pair<Employee> result = ArrayAlg.minmax(topHonchos);  // Error
+```
+minmax方法返回Pair<Manager>，而不是Pair<Employee>，并且这样的赋值是不合法的。
+无论S与T有什么联系，通常，Pair<S>与Pair<T>没有什么联系。
+这一限制看起来过于严格，但对于类型安全非常必要。
+
+注意，必须注意泛型与Java数组之间的重要区别。可以将一个Manager[]数组赋给一个类型为Employee[]
+的变量
+```
+Manager[] managerBuddies = {ceo, cfo};
+Employee employeeBuddies = managerBuddies;  // OK
+```
+然而，数组带有特别的保护，如果试图将一个低级别的雇员存储到employeeBuddies[0]，虚拟机将会
+抛出异常。
+
+永远可以将参数化类型转换为一个原始类型。例如，Pair<Employee>是原始类型Pair的一个子类型。
+在与遗留代码衔接时，这个转换非常必要。
+
+转换成原始类型之后会产生类型错误吗？很遗憾，会。
+```
+Pair<Manager> managerBuddies = new Pair<>(ceo, cfo);
+Pair rawBuddies = managerBuddies; // OK
+rawBuddies.setFirst(new File("..."));  // only a compile-time warning
+```
+
+最后，泛型类可以扩展或实现其他的泛型类。就这一点而言，与普通的类没有什么区别。例如，ArrayList<T>
+类实现List<T>接口。这意味着，一个ArrayList<Manager>可以被转换为一个List<Manager>。但是，
+一个ArrayList<Manager>不是一个ArrayList<Employee>或List<Employee>。
 
 
 
