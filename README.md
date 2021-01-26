@@ -60,3 +60,5 @@
 [通配符类型](ch7/lesson3.md)
 
 [反射和泛型](ch7/lesson4.md)
+
+[第8章 集合](ch8/ch.md)
