@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48e49041-e9fe-4678-83fd-7d1e04b47386" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ch8/ch.md" beforeDir="false" afterPath="$PROJECT_DIR$/ch8/ch.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,9 +19,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="139">
-                <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="429">
+                <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
               </first_editor>
               <second_editor />
             </state>
@@ -29,11 +29,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ch8/ch.md">
+        <entry file="file://$PROJECT_DIR$/ch8/lesson1.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="228">
-                <caret line="239" column="20" lean-forward="true" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="20" />
+              <first_editor relative-caret-position="163">
+                <caret line="122" column="33" lean-forward="true" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
               </first_editor>
               <second_editor />
             </state>
@@ -85,16 +85,17 @@
         <option value="$PROJECT_DIR$/ch7/lesson2.md" />
         <option value="$PROJECT_DIR$/ch7/lesson3.md" />
         <option value="$PROJECT_DIR$/ch7/lesson4.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/ch8/ch.md" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/ch8/lesson1.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="293" />
-    <option name="y" value="315" />
+    <option name="x" value="118" />
+    <option name="y" value="332" />
     <option name="width" value="1242" />
-    <option name="height" value="705" />
+    <option name="height" value="808" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -129,7 +130,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="eu.ydp.idea.ts.spec.generator.settings.spec.template" value="import {$ClassName$} from '$TestsRelativePath$../src/$classRelativePath$/$ClassName$';&#10;&#10;describe('$ClassName$', () =&gt; {&#10;  let $ObjName$:$ClassName$;&#10;&#10;  beforeEach(() =&gt; {&#10;    $ObjName$ = new $ClassName$();&#10;  });&#10;&#10;  describe('', () =&gt; {&#10;    it('', () =&gt; {&#10;      // given&#10;&#10;      // when&#10;&#10;      // then&#10;    });&#10;  });&#10;});&#10;" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="studioMain" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunDashboard">
@@ -167,7 +168,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="293" y="315" width="1242" height="705" extended-state="0" />
+    <frame x="118" y="332" width="1242" height="808" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24083333" />
@@ -187,7 +188,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295325" />
       <window_info anchor="bottom" id="GraphQL" order="7" weight="0.3295325" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4764398" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.476257" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3298292" />
       <window_info anchor="bottom" id="Flutter Performance" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Console" order="11" />
@@ -221,7 +222,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295325" />
       <window_info anchor="bottom" id="GraphQL" order="7" weight="0.3295325" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4764398" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.476257" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3298292" />
       <window_info anchor="bottom" id="Flutter Performance" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Console" order="11" />
@@ -588,21 +589,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/ch8/ch.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="139">
-            <caret line="47" column="28" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="3026">
+            <caret line="305" lean-forward="true" selection-start-line="305" selection-end-line="305" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch8/ch.md">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="228">
-            <caret line="239" column="20" lean-forward="true" selection-start-line="239" selection-start-column="20" selection-end-line="239" selection-end-column="20" />
+          <first_editor relative-caret-position="429">
+            <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch8/lesson1.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="163">
+            <caret line="122" column="33" lean-forward="true" selection-start-line="122" selection-start-column="33" selection-end-line="122" selection-end-column="33" />
           </first_editor>
           <second_editor />
         </state>

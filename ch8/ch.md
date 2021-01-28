@@ -246,8 +246,61 @@ default boolean removeIf(Predicate<? super E> filter)
 
 ### 集合框架中的接口
 
+Java集合框架为不同类型的集合定义了大量接口。
+集合有两个基本接口，Collection和Map。我们已经看到，可以用以下方法在集合中插入元素
+```
+boolean add(E element);
+```
+不过，由于映射包含键/值对，所以要用put方法来插入
+```
+V put(K key, V value)
+```
+要从集合读取元素，可以用迭代器访问元素。不过，从映射中读取值则要使用get方法。
+```
+V get(K key)
+```
+List是一个有序集合（ordered collection）。元素会增加到容器中的特定位置。可以采用两种方式访问元素，
+使用迭代器访问，或者使用一个整数索引来访问。后一种方法称为随机访问（random access），因为这样可以
+按任意顺序访问元素。与之不同，使用迭代器访问时，必须顺序地访问元素。
 
+List接口定义了多个用于随机访问的方法
+```
+void add(int index, E element)
+void remove(int index)
+E get(int index)
+E set(int index, E element)
+```
+ListIterator接口是Iterator的一个子接口。它定义了一个方法用于在迭代器位置前面增加一个元素
+```
+void add(E element)
+```
+坦率地讲，集合框架的这个方面设计得很不好。实际中有两种有序集合，其性能开销有很大差异。由数组支持的
+有序集合可以快速地随机访问，因此适合使用List方法并提供一个整数索引来访问。与之不同，链表尽管也是
+有序的，但是随机访问很慢，所以最好使用迭代器来遍历。如果原先提供两个接口就会容易一些了。
 
+为了避免对链表完成随机访问操作，Java SE 1.4引入了一个标记接口RandomAccess。这个接口不包含任何方法，
+不过可以用它来测试一个特定的集合是否支持高效的随机访问
+```
+if (c instanceof RandomAccess)
+{
+    use random access algorithm
+}
+else
+{
+    use sequential access algorithm
+}
+```
+Set 接口等同于Collection接口，不过其方法的行为有更严谨定义。集（set）的add方法不允许增加重复
+的元素。要适当地定义集的equals方法，只要两个集包含同样的元素就认为是相等的，而不要求这些元素有
+同样的顺序。hashCode方法的定义要保证包含相同元素的两个集会得到相同的散列码。
+
+既然方法签名是一样的，为什么还要建立一个单独的接口呢？从概念上讲，并不是所有集合都是集。建立一个
+Set接口可以让程序员编写只接受集的方法。
+SortedSet和SortedMap接口会提供用于排序的比较器对象，这两个接口定义了可以得到集合子集视图的方法。
+
+最后，Java SE 6引入了接口NavigableSet和NavigableMap，其中包含一些用于搜索和遍历有序集和映射
+的方法。（理想情况下，这些方法本应该直接包含在SortedSet和SortedMap接口中）TreeSet和TreeMap类
+实现了这些接口。
 
 
 
