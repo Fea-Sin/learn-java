@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48e49041-e9fe-4678-83fd-7d1e04b47386" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch8/lesson1.md" beforeDir="false" afterPath="$PROJECT_DIR$/ch8/lesson1.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch8/lesson2.md" beforeDir="false" afterPath="$PROJECT_DIR$/ch8/lesson2.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +31,8 @@
         <entry file="file://$PROJECT_DIR$/ch8/lesson2.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="94">
-                <caret line="52" column="51" lean-forward="true" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+              <first_editor relative-caret-position="247">
+                <caret line="187" column="16" selection-start-line="187" selection-start-column="16" selection-end-line="187" selection-end-column="16" />
               </first_editor>
               <second_editor />
             </state>
@@ -105,10 +104,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="149" />
-    <option name="y" value="269" />
+    <option name="x" value="266" />
+    <option name="y" value="51" />
     <option name="width" value="1242" />
-    <option name="height" value="892" />
+    <option name="height" value="969" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -181,7 +180,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="151" y="458" width="1242" height="892" extended-state="0" />
+    <frame x="62" y="395" width="1242" height="969" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.24083333" />
@@ -635,8 +634,8 @@
     <entry file="file://$PROJECT_DIR$/ch8/lesson2.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="94">
-            <caret line="52" column="51" lean-forward="true" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
+          <first_editor relative-caret-position="247">
+            <caret line="187" column="16" selection-start-line="187" selection-start-column="16" selection-end-line="187" selection-end-column="16" />
           </first_editor>
           <second_editor />
         </state>
