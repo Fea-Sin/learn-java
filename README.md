@@ -68,3 +68,5 @@
 [映射](ch8/lesson2.md)
 
 [视图与包装器](ch8/lesson3.md)
+
+[算法](ch8/lesson4.md)
