@@ -70,3 +70,5 @@
 [视图与包装器](ch8/lesson3.md)
 
 [算法](ch8/lesson4.md)
+
+[遗留的集合](ch8/lesson5.md)
